@@ -101,7 +101,7 @@ const NavbarWithSidebar = () => {
               
               {/* User Info */}
               <div className="flex-1">
-                <h3 className="text-xl font-semibold text-white mb-1">John Doe</h3>
+                <h3 className="text-xl font-semibold text-white mb-1">Unidentified</h3>
                 <p className="text-gray-400 text-sm mb-3">+91 98765 43210</p>
                 
                 {/* Rating Section */}
