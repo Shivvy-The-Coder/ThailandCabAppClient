@@ -39,7 +39,7 @@ const NavbarWithSidebar = () => {
     <>
       {/* Navbar */}
       <nav className="bg-black text-white shadow-lg relative z-40 w-full">
-        <div className="w-full px-4 py-4 max-w-full">
+        <div className="max-w-md mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Left side - Menu button */}
             <button 
@@ -54,7 +54,7 @@ const NavbarWithSidebar = () => {
               Cabrush
             </div>
 
-            {/* Right side - Additional buttons */}
+            {/* Right side - User */}
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                 <span className="text-sm font-semibold">U</span>
@@ -67,18 +67,20 @@ const NavbarWithSidebar = () => {
       {/* Overlay */}
       {isSidebarOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40 transition-opacity duration-300 touch-none"
+          className="fixed inset-0  bg-opacity-50 backdrop-blur-sm z-40 transition-opacity duration-300"
           onClick={toggleSidebar}
         />
       )}
 
       {/* Sidebar */}
-      <div className={`fixed top-0 left-0 w-full h-full z-50 transform transition-transform duration-300 ease-in-out ${
-        isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}>
-        <div className="w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 flex flex-col">
+      <div
+        className={`fixed top-0 left-0 w-full h-full z-50 transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="max-w-md mx-auto h-full bg-gradient-to-br from-gray-900 via-black to-gray-800 flex flex-col">
           
-          {/* Sidebar Header - Fixed */}
+          {/* Sidebar Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-700 flex-shrink-0">
             <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Menu
@@ -91,20 +93,15 @@ const NavbarWithSidebar = () => {
             </button>
           </div>
 
-          {/* User Profile Section - Fixed */}
+          {/* User Profile */}
           <div className="p-6 border-b border-gray-700 flex-shrink-0">
             <div className="flex items-start space-x-4">
-              {/* User Avatar */}
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
                 <span className="text-xl font-bold text-white">JD</span>
               </div>
-              
-              {/* User Info */}
               <div className="flex-1">
                 <h3 className="text-xl font-semibold text-white mb-1">Unidentified</h3>
                 <p className="text-gray-400 text-sm mb-3">+91 98765 43210</p>
-                
-                {/* Rating Section */}
                 <div className="flex items-center space-x-2">
                   <span className="text-sm text-gray-300">My Rating</span>
                   <div className="flex items-center space-x-1">
@@ -116,7 +113,7 @@ const NavbarWithSidebar = () => {
             </div>
           </div>
 
-          {/* Scrollable Menu Items Container */}
+          {/* Scrollable Menu */}
           <div className="flex-1 overflow-y-auto">
             <div className="p-4 space-y-2">
               {menuItems.map((item, index) => (
@@ -138,13 +135,11 @@ const NavbarWithSidebar = () => {
                   <HiChevronRight className="text-gray-400 group-hover:text-white transition-colors" />
                 </div>
               ))}
-              
-              {/* Extra padding at bottom for better scrolling */}
               <div className="h-20"></div>
             </div>
           </div>
 
-          {/* Sidebar Footer - Fixed at bottom */}
+          {/* Footer */}
           <div className="p-6 border-t border-gray-700 flex-shrink-0">
             <div className="text-center text-gray-400 text-sm">
               <p>Version 2.4.1</p>

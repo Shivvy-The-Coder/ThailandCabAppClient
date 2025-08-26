@@ -11,10 +11,10 @@ const Home = () => {
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      <div className="shrink-0">
+      <div className="shrink-0 w-full max-w-md mx-auto py-4">
         <NavbarWithSidebar />
       </div>
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col w-full max-w-md mx-auto py-4">
         <div>
           <LeafletMap />
         </div>
